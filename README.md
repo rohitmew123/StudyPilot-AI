@@ -1,94 +1,260 @@
-# studypilot-ai
+# 🚀 StudyPilot AI
 
-Simple ReAct agent
-Agent generated with `agents-cli` version `1.0.0`
+> **An AI-powered Student Productivity Platform built using Python, Streamlit, SQLite, Google ADK, and AI Agents.**
 
-## Project Structure
+StudyPilot AI is an intelligent student productivity platform designed to help students organize their studies, generate personalized study plans, prepare for interviews, revise efficiently, and track their learning progress using AI-powered agents.
 
-```
-studypilot-ai/
-├── app/         # Core agent code
-│   ├── agent.py               # Main agent logic
-│   ├── fast_api_app.py        # FastAPI Backend server
-│   └── app_utils/             # App utilities and helpers
-├── tests/                     # Unit, integration, and load tests
-├── GEMINI.md                  # AI-assisted development guide
-└── pyproject.toml             # Project dependencies
-```
-
-> 💡 **Tip:** Use [Antigravity CLI](https://antigravity.google/) for AI-assisted development - project context is pre-configured in `GEMINI.md`.
-
-## Requirements
-
-Before you begin, ensure you have:
-- **uv**: Python package manager (used for all dependency management in this project) - [Install](https://docs.astral.sh/uv/getting-started/installation/) ([add packages](https://docs.astral.sh/uv/concepts/dependencies/) with `uv add <package>`)
-- **agents-cli**: Agents CLI - Install with `uv tool install google-agents-cli`
-- **Google Cloud SDK**: For GCP services - [Install](https://cloud.google.com/sdk/docs/install)
-
-
-## Quick Start
-
-Install `agents-cli` and its skills if not already installed:
-
-```bash
-uvx google-agents-cli setup
-```
-
-Install required packages:
-
-```bash
-agents-cli install
-```
-
-Test the agent with a local web server:
-
-```bash
-agents-cli playground
-```
-
-You can also use features from the [ADK](https://adk.dev/) CLI with `uv run adk`.
-
-## Commands
-
-| Command              | Description                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- |
-| `agents-cli install` | Install dependencies using uv                                                         |
-| `agents-cli playground` | Launch local development environment                                                  |
-| `agents-cli lint`    | Run code quality checks                                                               |
-| `agents-cli eval`    | Evaluate agent behavior (generate, grade, analyze, and more — see `agents-cli eval --help`) |
-| `uv run pytest tests/unit tests/integration` | Run unit and integration tests                                                        |
-| `agents-cli deploy`  | Deploy agent to Agent Runtime                                                                |
-| `agents-cli publish gemini-enterprise` | Register deployed agent to Gemini Enterprise                    || [A2A Inspector](https://github.com/a2aproject/a2a-inspector) | Launch A2A Protocol Inspector                                                        |
-
-## 🛠️ Project Management
-
-| Command | What It Does |
-|---------|--------------|
-| `agents-cli scaffold enhance` | Add CI/CD pipelines and Terraform infrastructure |
-| `agents-cli infra cicd` | One-command setup of entire CI/CD pipeline + infrastructure |
-| `agents-cli scaffold upgrade` | Auto-upgrade to latest version while preserving customizations |
+This project was developed as the capstone project for the **Kaggle 5-Day AI Agents: Intensive Vibe Coding Course with Google**.
 
 ---
 
-## Development
+# 🌟 Features
 
-Edit your agent logic in `app/agent.py` and test with `agents-cli playground` - it auto-reloads on save.
+## 📊 Dashboard
+- Personalized dashboard
+- Study statistics
+- Daily progress
+- Focus score
+- Streak tracking
+- Recent activity
 
-## Deployment
+---
 
-```bash
-gcloud config set project <your-project-id>
-agents-cli deploy
+## 📅 Daily Planner
+
+Generate AI-powered daily study plans based on:
+
+- Available study hours
+- Subjects
+- Priorities
+- Goals
+
+Users can edit and manage their daily schedule.
+
+---
+
+## 📚 Revision Planner
+
+Generate personalized revision schedules.
+
+Features include:
+
+- Topic-based revision
+- Multi-day planning
+- Saved revision plans
+- SQLite persistence
+
+---
+
+## 🤖 AI Study Assistant
+
+An AI-powered study companion capable of:
+
+- Answering study questions
+- Providing explanations
+- Helping with concepts
+- Learning guidance
+
+(Currently uses a fallback assistant and is designed for future Gemini API integration.)
+
+---
+
+## 💼 Interview Preparation
+
+Prepare for technical interviews using AI assistance.
+
+Supports preparation for:
+
+- DSA
+- DBMS
+- Operating Systems
+- Computer Networks
+- HR Interview Questions
+
+---
+
+## ✅ Daily Task Manager
+
+Manage study tasks with:
+
+- Add tasks
+- Edit tasks
+- Delete tasks
+- Complete tasks
+- Daily progress tracking
+
+---
+
+## 🔥 Streak Tracking
+
+Track study consistency through:
+
+- Daily streaks
+- Focus score
+- Progress statistics
+
+---
+
+## 📈 Analytics
+
+Visualize study progress using charts:
+
+- Study hours
+- Subject distribution
+- Weekly progress
+- Performance insights
+
+---
+
+# 🏗️ Project Architecture
+
+```
+                User
+                  │
+                  ▼
+          Streamlit Frontend
+                  │
+                  ▼
+         Google ADK AI Agent
+                  │
+      ┌───────────┼────────────┐
+      │           │            │
+      ▼           ▼            ▼
+ Daily Planner  AI Assistant  Revision Planner
+      │           │            │
+      └───────────┼────────────┘
+                  ▼
+            SQLite Database
 ```
 
-To add CI/CD and Terraform, run `agents-cli scaffold enhance`.
-To set up your production infrastructure, run `agents-cli infra cicd`.
+---
 
-## Observability
+# 🛠️ Tech Stack
 
-Built-in telemetry exports to Cloud Trace, BigQuery, and Cloud Logging.
+### Frontend
+- Streamlit
 
-## A2A Inspector
+### Backend
+- Python
 
-This agent supports the [A2A Protocol](https://a2a-protocol.org/). Use the [A2A Inspector](https://github.com/a2aproject/a2a-inspector) to test interoperability.
-See the [A2A Inspector docs](https://github.com/a2aproject/a2a-inspector) for details.
+### Database
+- SQLite
+
+### AI & Agent Framework
+- Google ADK
+- Agents CLI
+- Antigravity IDE
+
+### Deployment Ready
+- FastAPI
+- Docker
+
+---
+
+# 📂 Project Structure
+
+```
+StudyPilot-AI/
+
+├── app/
+│   ├── agent.py
+│   ├── auth.py
+│   ├── database.py
+│   ├── planner.py
+│   └── helpers/
+│
+├── frontend/
+│   └── main.py
+│
+├── tests/
+│
+├── deployment/
+│
+├── README.md
+│
+└── pyproject.toml
+```
+
+---
+
+# 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/rohitmew123/StudyPilot-AI.git
+```
+
+Move into the project
+
+```bash
+cd StudyPilot-AI
+```
+
+Install dependencies
+
+```bash
+uv sync
+```
+
+Run the application
+
+```bash
+streamlit run frontend/main.py
+```
+
+---
+
+# 🤖 AI Agent Concepts Used
+
+This project demonstrates multiple concepts from Google's AI Agents course:
+
+- ✅ Google ADK Agent
+- ✅ Agent Skills
+- ✅ Antigravity IDE
+- ✅ AI-assisted Development
+- ✅ Deployable Agent Architecture
+
+---
+
+# 📸 Screenshots
+
+Add screenshots of:
+
+- Login
+- Dashboard
+- Daily Planner
+- Revision Planner
+- AI Study Assistant
+- Interview Preparation
+- Analytics
+
+---
+
+# 🎯 Future Improvements
+
+- Gemini API Integration
+- Multi-Agent Collaboration
+- Cloud Database
+- Notifications
+- Mobile Application
+- AI Voice Assistant
+- Calendar Sync
+- PDF Report Generation
+
+---
+
+# 👨‍💻 Author
+
+**Rohit Mewada**
+
+Student Developer
+
+Built for the **Kaggle AI Agents: Intensive Vibe Coding Capstone Project**.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
