@@ -222,12 +222,32 @@ This project demonstrates multiple concepts from Google's AI Agents course:
 Add screenshots of:
 
 - Login
+- <img width="1897" height="871" alt="image" src="https://github.com/user-attachments/assets/8f5a7477-dc87-4ff1-a699-21d82fd161d2" />
+
 - Dashboard
+- <img width="1827" height="900" alt="image" src="https://github.com/user-attachments/assets/115efd07-4dda-4bcf-9e13-84bf5ff42af5" />
+
 - Daily Planner
+- <img width="1895" height="893" alt="image" src="https://github.com/user-attachments/assets/98cd8dd4-4ab3-49af-958b-3f4d496ca5f2" />
+
 - Revision Planner
+- <img width="1897" height="895" alt="image" src="https://github.com/user-attachments/assets/91475877-5f21-4b01-ad42-f4afb9e69bf6" />
+
 - AI Study Assistant
+- <img width="1912" height="891" alt="image" src="https://github.com/user-attachments/assets/9bacaa06-9f83-4659-b0bc-065cc2fe4f9e" />
+
 - Interview Preparation
+- <img width="1912" height="917" alt="image" src="https://github.com/user-attachments/assets/6adb3e4e-7bc5-4b60-902a-e5b912cb79fc" />
+
 - Analytics
+- <img width="1905" height="910" alt="image" src="https://github.com/user-attachments/assets/694789d5-f401-46f7-94bc-e80087c5e2fa" />
+
+- Daily Tasks
+- <img width="1911" height="892" alt="image" src="https://github.com/user-attachments/assets/7ed39cfb-304b-465e-9392-71fc267c2e0c" />
+
+- Streak Tracker
+- <img width="1907" height="890" alt="image" src="https://github.com/user-attachments/assets/ad281a60-4eeb-4825-be67-3d6ea7e8afd8" />
+
 
 ---
 
